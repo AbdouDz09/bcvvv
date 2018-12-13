@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "d!"
+var prefix = "v!"
 
 
 
 //bc
 
 client.on("message", message => {
-    if (message.content.startsWith("d!bc")) {
+    if (message.content.startsWith("v!bc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -23,11 +23,11 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "d!bc";
+  var prefix = "v!";
 
   client.on("message", message => {
   
-              if (message.content.startsWith(prefix + "bc")) {
+              if (message.content.startsWith(prefix + "obc")) {
                            if (!message.member.hasPermission("ADMINISTRATOR"))  return;
     let args = message.content.split(" ").slice(1);
     var argresult = args.join(' '); 
@@ -46,7 +46,7 @@ client.on("message", message => {
 
 client.on('message', message => {
     var  user = message.mentions.users.first() || message.author;
-if (message.content.startsWith("d!avatar")) {
+if (message.content.startsWith("v!avatar")) {
 message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 }
 });
@@ -55,7 +55,7 @@ message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
   client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('d!adminbc')){
+if (message.content.startsWith('v!adminbc')){
 if(!message.author.id === '461468630773661699') return;
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
@@ -66,14 +66,14 @@ m.sendMessage(args)
 
   
   client.on("message", message => {
-    if (message.content === "d!help") {
+    if (message.content === "v!help") {
      const embed = new Discord.RichEmbed() 
          .setColor("RANDOM")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
-       d!obc | لأرسال برود كاست للكل
-       d!bc  |  لأرسال برود كاست للأونلاين
-       d!support | سيرفر السبورت** `)
+       v!bc | لأرسال برود كاست للكل
+       v!obc  |  لأرسال برود كاست للأونلاين
+       v!support | سيرفر السبورت** `)
    message.author.sendEmbed(embed)
    
    }
@@ -95,7 +95,7 @@ m.sendMessage(args)
 
 
    client.on('message', message => {
-    if (message.content.startsWith("d!bot")) {
+    if (message.content.startsWith("v!bot")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
